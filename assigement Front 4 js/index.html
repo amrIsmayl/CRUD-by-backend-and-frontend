@@ -10,39 +10,58 @@
 
 <body>
 
-    <div class=" text-center my-3 ">
-        <h1>CRUD Operation With Node.js API</h1>
-    </div>
-    <div class=" container rounded shadow p-3 border my-5">
-        <label class=" ps-3" for="ProductName">Product Name</label>
-        <input class=" form-control my-3" type="text" id="ProductName">
-        <label class=" ps-3" for="">Product Name</label>
-        <input class=" form-control my-3" type="number" id="ProductPrice">
-        <label class=" ps-3" for="">Product Description</label>
-        <textarea class=" form-control my-3" name="" id="ProductDescription" cols="30" rows="10"></textarea>
-        <div class=" d-flex justify-content-between py-3">
-            <div>
-                <button id="addBtn" class=" btn btn-outline-primary ms-5" onclick="addProduct()">Add Product</button>
-                <button id="updateBtn" class=" uddateData d-none btn btn-outline-success ms-5" onclick="sendUpdate()">update Product</button>
+    <div id="particles-js" class=" position-relative">
+       
+        <div class=" position-absolute k1">
+            <div class=" text-center my-3 pt-5 hover_line">
+                <h1 class=" ">CRUD Operation With Node.js API</h1>
+                <div class="line"></div>
             </div>
-            <input class=" form-control w-75" oninput="searchProducts()" type="text" id="search" placeholder="Search......" >
+            <div class=" container rounded shadow p-3 border my-5 color1">
+
+                <label class=" ps-3 fs-5 hover_line1" for="ProductName">Product Name</label>
+                <div class="line2 ms-4 pt-1"></div>
+                <input class=" form-control my-3" type="text" id="ProductName">
+                <h6 class="alert alert-danger py-2 w-50 d-none text-center translate-middle-x start-50" id="validit">The name
+                    must consist of letters and numbers only</h6>
+
+                <label class=" ps-3 d-block fs-5" for="">Product Name</label>
+                <div class="line2 ms-4 pt-1"></div>
+                <input class=" form-control my-3" type="number" id="ProductPrice">
+
+                <label class=" ps-3 fs-5" for="">Product Description</label>
+                <div class="line2 ms-4 pt-1"></div>
+                <textarea class=" form-control my-3" name="" id="ProductDescription" cols="30" rows="10"></textarea>
+
+                <div class=" d-flex justify-content-between py-3">
+                    <div>
+                        <button id="addBtn" class=" btn btn-outline-light ms-5" onclick="showMessage()">Add Product</button>
+                        <button id="updateBtn" class=" uddateData d-none btn ms-5" onclick="sendUpdate()">update
+                            Product</button>
+                    </div>
+                    <input class=" form-control w-75" oninput="searchProducts()" type="text" id="search"
+                        placeholder="Search......">
+                </div>
+            </div>
+            
+            <div class=" container my-5 rounded border color1">
+                <table class=" table text-center color2">
+                    <thead>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Description</th>
+                        <th>Actions</th>
+                    </thead>
+                    <tbody id="tbody">
+            
+                    </tbody>
+                </table>
+            
+            </div>
         </div>
     </div>
 
-    <div class=" container my-5">
-        <table class=" table text-center">
-            <thead>
-                <th>Name</th>
-                <th>Price</th>
-                <th>Description</th>
-                <th>Actions</th>
-            </thead>
-            <tbody id="tbody">
-                
-            </tbody>
-        </table>
-
-    </div>
+   
 
 
 
@@ -55,8 +74,8 @@
 
 
 
-
-
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> <!-- stats.js lib -->
+    <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/all.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
