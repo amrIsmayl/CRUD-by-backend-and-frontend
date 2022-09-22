@@ -50,7 +50,7 @@ function showMessage() {
 function display(data) {
   let box = ``;
   for (let i = 0; i < data.length; i++) {
-    box += `  <tr>
+    box += `<tr>
       <td>${data[i].name}</td>
       <td>${data[i].price}</td>
       <td>${data[i].description}</td>
